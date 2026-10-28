@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Разбор карточек пекарни «Лавка Афанасьевых»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--brick:#7A2F2A;--brick-d:#5A211D;--crust:#C8792E;--crust-l:#FBEBD6;--ink:#2B1A17;--flour:#FFFCF7;--card:#fff;--muted:#7B6A62;--line:#EEE3D6;--ok:#3C7D3A;--warn:#B06A10;--bad:#B3392F}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:clip}
+body{font-family:"Golos Text",system-ui,sans-serif;background:var(--flour);color:var(--ink);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:clip}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;line-height:1.12}
+a{color:inherit}
+.top{background:var(--brick-d);color:#ecd9d4;font-size:13px;padding:9px 0}
+.top a{color:#fff;font-weight:600}
+header.hero{padding:46px 0 26px}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--crust)}
+header h1{font-size:clamp(30px,5vw,48px);font-weight:800;margin:12px 0 14px}
+header h1 span{color:var(--brick)}
+header p{font-size:18px;color:#4c3b35;max-width:62ch}
+.score{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0 6px}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.sc b{display:block;font-family:"Playfair Display";font-size:32px;margin:2px 0}
+.sc small{color:var(--muted)}
+.sc.bad b{color:var(--bad)}.sc.ok b{color:var(--ok)}
+.tbl{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:22px 0}
+.tbl table{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{background:#FBF6EF;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.tbl tr:last-child td{border-bottom:0}
+.y{color:var(--ok);font-weight:600}.n{color:var(--bad);font-weight:600}
+.cap{font-size:14px;color:var(--muted);margin:-12px 0 10px}
+h2{font-size:28px;font-weight:800;margin:44px 0 16px}
+.find{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-bottom:12px;display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
+.find>*:not(.num){grid-column:2;min-width:0}
+.num{grid-column:1;grid-row:1/span 9;width:38px;height:38px;border-radius:50%;background:var(--brick);color:#fff;display:grid;place-items:center;font-family:"Playfair Display";font-size:17px}
+.find h3{font-size:20px;line-height:1.3;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tag{font-family:"Golos Text";font-size:12px;font-weight:600;padding:3px 9px;border-radius:99px}
+.tag.hi{background:#FBE5E2;color:var(--bad)}.tag.mid{background:#FFF0D9;color:var(--warn)}.tag.lo{background:#EEF0EA;color:#55604f}
+.find p{color:#4c3b35}
+.find q{font-style:italic}
+.fix{background:#F1F7EE;border-radius:10px;padding:10px 12px;font-size:15px}
+.fix b{color:var(--ok)}
+.shots{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.shot{display:block;border-radius:12px;border:1px solid var(--line);width:100%;max-width:360px;height:auto}
+.shots .shot{max-width:calc(50% - 5px);flex:1 1 200px}
+.offer{background:var(--brick);color:#fff;border-radius:24px;padding:30px;margin:44px 0 20px}
+.offer h2{margin:0 0 12px;color:#fff}
+.offer ul{list-style:none;display:grid;gap:8px;margin:14px 0 20px}
+.offer li{padding-left:26px;position:relative}
+.offer li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:#FFD9A8}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 18px;border-radius:12px;font-weight:600;text-decoration:none;background:#fff;color:var(--ink)}
+.btn.o{background:transparent;border:2px solid #fff;color:#fff}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+footer{padding:20px 0 50px;color:var(--muted);font-size:14px}
+@media (max-width:640px){.wrap{padding:0 16px}.score{grid-template-columns:1fr}.find{grid-template-columns:1fr;padding:18px}.find>*:not(.num){grid-column:1}.num{grid-row:auto}.tbl{overflow-x:auto}.tbl table{min-width:560px}.shots .shot{max-width:100%}.offer{padding:22px 18px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap">Разбор подготовил Александр Ли для пекарни «Лавка Афанасьевых», 28 октября 2026 · <a href="index.html">Концепт сайта →</a></div></div>
+
+<header class="hero"><div class="wrap">
+  <span class="kicker">Лавка Афанасьевых · 5 лавок в Краснодаре</span>
+  <h1>Пять лавок с оценками 4,5–5,0, <span>и все пять карточек в 2ГИС выглядят заброшенными</span></h1>
+  <p>Посмотрел, как пекарня выглядит в 2ГИС и Яндекс Картах: оттуда люди ищут «пекарню рядом». Выпечку хвалят, на главной лавке 591 оценка и 5,0. Но карты показывают людям устаревшие данные, пустые цены и рекламу соседей. Всё ниже исправляется за пару недель, почти всё бесплатно.</p>
+  <div class="score">
+    <div class="sc ok"><small>Главная лавка в 2ГИС</small><b>5,0</b><small>591 оценка, 146 отзывов</small></div>
+    <div class="sc bad"><small>Плашка «давно не обновляла данные»</small><b>5 из 5</b><small>на всех лавках в 2ГИС</small></div>
+    <div class="sc bad"><small>Ответов в 2ГИС</small><b>4</b><small>на 187 последних отзывов всех лавок</small></div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="tbl"><table>
+    <tr><th>Героев-Разведчиков, 48</th><th>2ГИС</th><th>Яндекс Карты</th></tr>
+    <tr><td>Рейтинг</td><td>5,0 · 591 оценка, 146 отзывов</td><td>4,8 · 399 оценок, 201 отзыв</td></tr>
+    <tr><td>Актуальность</td><td class="n">«Компания давно не обновляла данные»</td><td>Карточку ведут: есть ответы</td></tr>
+    <tr><td>Часы</td><td>7:30–21:30</td><td>до 21:30</td></tr>
+    <tr><td>Цены</td><td class="n">Нет, вкладка «Меню» пустая</td><td class="n">3 позиции, «Давно не обновлялось»</td></tr>
+    <tr><td>Ответы на отзывы</td><td class="n">1 из 50 последних, октябрь 2022</td><td class="y">18 из 50</td></tr>
+    <tr><td>Скидка 30% с 20:00</td><td class="n">Не указана</td><td class="n">Не указана</td></tr>
+    <tr><td>Сайт, мессенджеры</td><td class="n">Нет</td><td class="n">Нет</td></tr>
+  </table></div>
+
+  <h2>Все лавки в 2ГИС</h2>
+  <div class="tbl"><table>
+    <tr><th>Лавка</th><th>Рейтинг</th><th>Отзывы</th><th>Ваших ответов</th><th>Фото</th><th>Статус</th></tr>
+    <tr><td>Героев-Разведчиков, 48</td><td>5,0 · 591</td><td>146</td><td class="n">1 из 50</td><td>25</td><td class="n">давно не обновляла</td></tr>
+    <tr><td>Валерия Гассия, 2/а</td><td>5,0 · 179</td><td>108</td><td class="n">1 из 50</td><td>22</td><td class="n">давно не обновляла</td></tr>
+    <tr><td>Железнодорожная, 24</td><td>4,9 · 139</td><td>80</td><td class="n">0 из 50</td><td>16</td><td class="n">давно не обновляла</td></tr>
+    <tr><td>Скрябина, 4</td><td>5,0 · 24</td><td>18</td><td class="n">0 из 18</td><td>4</td><td class="n">давно не обновляла</td></tr>
+    <tr><td>Обрывная, 132/1 к4</td><td>4,5 · 22</td><td>19</td><td class="n">2 из 19</td><td>8</td><td class="n">давно не обновляла</td></tr>
+  </table></div>
+  <p class="cap">Фото: общий альбом карточки, без панорам. Телефон во всех пяти карточках один: +7 861 945-11-00.</p>
+
+  <h2>Что нашёл</h2>
+
+  <div class="find"><span class="num">1</span>
+    <h3>На всех пяти лавках 2ГИС пишет «Компания давно не обновляла данные» <span class="tag hi">важно</span></h3>
+    <p>Эту строку видит каждый, кто открывает любую из ваших карточек. В разделе «Актуальность данных» стоит «не подтверждена». Человек, который ищет, где купить хлеб по пути домой, читает это как «может, уже закрылись» и идёт в соседнюю пекарню, у которой такой плашки нет.</p>
+    <div class="fix"><b>Что сделать:</b> зайти в личный кабинет 2ГИС и подтвердить данные всех пяти лавок. Бесплатно, около получаса на все.</div>
+  </div>
+
+  <div class="find"><span class="num">2</span>
+    <h3>В 2ГИС отзывы остаются без ответа, хотя в Яндексе вы отвечаете <span class="tag hi">важно</span></h3>
+    <p>На 187 последних отзывов всех лавок в 2ГИС всего 4 ответа. На главной лавке единственный ответ написан в октябре 2022. Без ответа висят и свежие тяжёлые отзывы: в августе 2026 человек поставил 1 звезду с жалобой на начинку слойки, в сентябре 2026 пишут «вкусно, но дороговато». При этом в Яндексе на той же лавке ответы есть на 18 из 50 отзывов, значит, человек, который отвечает, у вас есть. 2ГИС просто выпал.</p>
+    <div class="fix"><b>Что сделать:</b> сначала спокойно ответить на негативные отзывы во всех лавках, потом поблагодарить за хорошие. Дальше отвечать на новые раз в неделю, могу взять это на себя.</div>
+  </div>
+
+  <div class="find"><span class="num">3</span>
+    <h3>На вывеске «Настоящая пекарня», а в картах «Лавка Афанасьевых» <span class="tag mid">заметно</span></h3>
+    <p>На фасаде и на двери лавки на Героев-Разведчиков крупно написано «Настоящая пекарня», имени «Лавка Афанасьевых» не видно. Человек открывает карту, идёт к «Лавке Афанасьевых» и видит другую вывеску. А тот, кто запомнил вывеску и ищет «Настоящая пекарня», ваши карточки не найдёт.</p>
+    <div class="shots"><img class="shot" src="img/facade.jpg" alt="Фасад лавки с вывеской «Настоящая пекарня»" loading="lazy"><img class="shot" src="img/door.jpg" alt="Дверь лавки: «Настоящая пекарня 7.30–21.30»" loading="lazy"></div>
+    <div class="fix"><b>Что сделать:</b> добавить «Настоящая пекарня» вторым названием в обе карты и в описание, первым фото поставить фасад с вывеской. Проверю, как подписаны остальные лавки.</div>
+  </div>
+
+  <div class="find"><span class="num">4</span>
+    <h3>Цен нет, хотя на витрине они подписаны у каждой позиции <span class="tag mid">заметно</span></h3>
+    <p>Вкладка «Меню» в 2ГИС пустая, вместо цен там просьба к посетителям «сфотографируйте меню». В Яндексе меню есть, но помечено «Давно не обновлялось»: хлеб пшеничный 55 ₽, батон 50 ₽, пицца 80 ₽ за 100 г. Актуальные цены люди видят только на фото витрины, которые выложили гости.</p>
+    <img class="shot" src="img/savory.jpg" alt="Витрина с подписанными ценами: самса, хачапури, эчпочмак" loading="lazy">
+    <div class="fix"><b>Что сделать:</b> перенести в обе карты 20–30 ходовых позиций с витрины: хлеб, самса, пирожки, слойки, кофе. Покупатель пекарни сравнивает именно цены, а у вас они хорошие.</div>
+  </div>
+
+  <div class="find"><span class="num">5</span>
+    <h3>На вопросы покупателей отвечает ИИ, а не вы <span class="tag mid">заметно</span></h3>
+    <p>В блоке «Вопросы о месте» в 2ГИС висят вопросы <q>Когда обычно выносят свежий хлеб?</q>, <q>Есть ли торты на заказ?</q>, <q>Доставляют ли вашу выпечку?</q>, <q>Есть ли безглютеновая выпечка?</q>. Отвечает ИИ-помощник 2ГИС, своими словами и по догадкам.</p>
+    <div class="fix"><b>Что сделать:</b> ответить самим: во сколько свежий хлеб, что пироги и торты есть на заказ, как заказать. Это готовые продажи заказов.</div>
+  </div>
+
+  <div class="find"><span class="num">6</span>
+    <h3>На вашей карточке рекламируются другие пекарни <span class="tag mid">заметно</span></h3>
+    <p>Прямо под адресом главной лавки стоит реклама «Хлебных историй» с кнопкой «Заказать доставку», ниже «Булочка», «Буфет-рулет», «Кудесница» и «Крендель» с пометками «Торты на заказ». А в списке ваших пяти филиалов между лавками вставлена реклама кондитерской «Ванлав».</p>
+    <div class="fix"><b>Что сделать:</b> заполненная карточка с ценами, акцией и ответами перетягивает внимание обратно на вас. Убрать конкурентов со своей карточки можно в рекламных пакетах 2ГИС, цену стоит уточнить отдельно.</div>
+  </div>
+
+  <div class="find"><span class="num">7</span>
+    <h3>Скидка 30% после 20:00 и пироги на заказ есть только на доске в лавке <span class="tag lo">просто</span></h3>
+    <p>На меловой доске: «Скидка 30% на всю выпечку с 20:00» и «Пироги на заказ, сладкие и сытные». В отзывах про скидку пишут постоянно, в Яндексе тема «Скидки и акции» набрала 16 отзывов и 100% положительных. Но ни в одной карточке акции нет, а рубрики «Пироги на заказ» нет совсем.</p>
+    <img class="shot" src="img/hero.jpg" alt="Доски в лавке: скидка 30% с 20:00 и пироги на заказ" loading="lazy">
+    <div class="fix"><b>Что сделать:</b> завести вечернюю скидку как акцию в 2ГИС и Яндексе, добавить «Пироги на заказ» и «Торты на заказ» в описание и рубрики.</div>
+  </div>
+
+  <div class="find"><span class="num">8</span>
+    <h3>Мало своих фото, особенно снаружи <span class="tag lo">просто</span></h3>
+    <p>На главной лавке в 2ГИС 25 фото, из них 16 выложили гости, снаружи всего 3. На Скрябина 4 фото, на Обрывной 8. Среди гостевых много надкусанной выпечки крупным планом, и именно такие фото люди видят первыми.</p>
+    <div class="fix"><b>Что сделать:</b> по 8–10 хороших фото на каждую лавку: вход с вывеской, витрина утром, пироги на заказ, зал. Свои фото ставятся первыми.</div>
+  </div>
+
+  <div class="find"><span class="num">9</span>
+    <h3>Новые лавки почти без оценок <span class="tag lo">просто</span></h3>
+    <p>У главной лавки 591 оценка, а у Скрябина 24 и у Обрывной 22, причём на Обрывной рейтинг 4,5, самый низкий в сети. При таком малом числе пара плохих отзывов заметно тянет рейтинг вниз. В Яндексе ваша лавка на Железнодорожной уже получила «Хорошее место 2026», а остальные нет.</p>
+    <div class="fix"><b>Что сделать:</b> QR-код «Оцените нас» на кассе в каждой лавке и просьба продавца при вечерней скидке. Обычно это даёт 10–20 оценок в месяц на лавку.</div>
+  </div>
+
+  <div class="offer">
+    <h2>Что предлагаю</h2>
+    <p>Беру на себя всё из списка, от вас нужен только код из СМС для подтверждения карточек.</p>
+    <ul>
+      <li>Подтвердить все пять лавок в 2ГИС и Яндексе, единые часы, рубрики, второе название с вывески</li>
+      <li>Цены с витрины в обе карты, акция «минус 30% с 20:00», пироги и торты на заказ</li>
+      <li>Ответить на все отзывы и вопросы и дальше отвечать на новые</li>
+      <li>Хорошие фото каждой лавки: вход, витрина, выпечка</li>
+      <li>Сайт пекарни со ссылкой из всех карточек: <a href="index.html" style="color:#fff">вот концепт</a></li>
+      <li>Раз в месяц отчёт по каждой лавке: просмотры, звонки, маршруты</li>
+    </ul>
+    <p style="margin-bottom:18px">Разбор бесплатный. Стоимость работ обсудим, она небольшая.</p>
+    <div class="btns">
+      <a class="btn" href="https://t.me/DezmontDeXa" target="_blank" rel="noopener">Написать в Telegram</a>
+      <a class="btn o" href="tel:+79147765705">+7 914 776-57-05</a>
+    </div>
+  </div>
+</main>
+<footer><div class="wrap">Данные из открытых карточек 2ГИС и Яндекс Карт на 28 октября 2026. Фото из карточки 2ГИС. Александр Ли.</div></footer>
+</body>
+</html>
